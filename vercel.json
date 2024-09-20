@@ -2,11 +2,6 @@
   "version": 2,
   "builds": [
     {
-      "src": "client/index.html",
-      "use": "@vercel/static-build",
-      "config": {}
-    },
-    {
       "src": "server/index.js",
       "use": "@vercel/node",
       "config": {}
