@@ -5,8 +5,7 @@ const cookieParser = require('cookie-parser');
 const express = require('express');
 const mongoose = require('mongoose');
 var cors = require('cors')
-const DB_PASSWORD = "m780kKiH2jGkiQuo"
-  // process.env.DB_PASSWORD;
+const DB_PASSWORD = process.env.DB_PASSWORD;
 
 async function connectDb(){
   if (!DB_PASSWORD) {
@@ -26,20 +25,18 @@ async function startServer() {
   const app = express();
   app.use(cookieParser());
   app.use(express.json());
-  const stripe = require('stripe')("sk_test_51PyzTrP7CpbP5uBpz8R3iScDouoldMwUhShEn7s6Gc0de3yHxxjGl8A9KdIfuBZ6aIjQJ8o4UAZhhbC0oK1u528q00g0YNuzcY");
+  const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
   const router = require('./routes/index');
-  const port = 4000;
-    // process.env.PORT_NAME;
+  const port = process.env.PORT_NAME;
   
   app.use(cors({
-    origin: "https://mern-resturant-application1.vercel.app",
-      // process.env.FRONT_END_URL,
+    origin: process.env.FRONT_END_URL,
     credentials: true
   }));
   
   app.use('/api', router);
-  app.listen(4000, () => {
+  app.listen(port, () => {
     console.log(` listening on port ${port}`);
   });
 }
