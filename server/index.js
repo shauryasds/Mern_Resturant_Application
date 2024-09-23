@@ -36,7 +36,7 @@ async function startServer() {
   }));
   
   app.use('/api', router);
-  app.listen(port, () => {
+  app.listen(4000, () => {
     console.log(` listening on port ${port}`);
   });
 }
