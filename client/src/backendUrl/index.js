@@ -1,4 +1,4 @@
-const backendUrl=process.env.REACT_APP_BACKEND_URL
+const backendUrl="https://mern-resturant-application-backend.vercel.app" || process.env.REACT_APP_BACKEND_URL
 const apiUrl = {
   login: {
     method: "POST",
