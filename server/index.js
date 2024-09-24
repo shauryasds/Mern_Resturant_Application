@@ -31,7 +31,7 @@ async function startServer() {
   const port = process.env.PORT_NAME;
   
   app.use(cors({
-    origin: process.env.FRONT_END_URL,
+    origin: "https://mern-resturant-application1-git-master-shaurya-deeps-projects.vercel.app",
     credentials: true
   }));
   
