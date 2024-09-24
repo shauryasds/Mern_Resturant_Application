@@ -51,7 +51,7 @@ router.get('/getuser', getUserController);
 
 const updatecart = require('../updteCart');
 const getCart = require('../getCart');
-const removeFromCart = require('../removeCart');
+const removeFromCart = require('../removeFromCart');
 
 router.post('/getcart',getCart)
 router.put('/updatecart',loginMiddleware,updatecart)
