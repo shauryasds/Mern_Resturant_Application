@@ -6,7 +6,7 @@
       "use": "@vercel/node"
     }
   ],
-  "routes": [  // <--- Moved to top-level section
+  "routes": [
     {
       "src": "/(.*)",
       "dest": "index.js"
