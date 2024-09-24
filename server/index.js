@@ -30,10 +30,10 @@ async function startServer() {
   const router = require('./routes/index');
   const port = process.env.PORT_NAME;
   
-  app.use(cors({
-    origin: "https://mern-resturant-application1-git-master-shaurya-deeps-projects.vercel.app",
-    credentials: true
-  }));
+ app.use(cors({
+  origin: '*',
+  credentials: true
+}));
   
   app.use('/api', router);
   app.listen(port, () => {
