@@ -11,5 +11,10 @@
       "src": "/(.*)",
       "dest": "index.js"
     }
-  ]
+  ],
+  "cors": {
+    "origin": ["https://mern-resturant-application1.vercel.app"],
+    "methods": ["GET", "POST", "PUT", "DELETE"],
+    "headers": ["Content-Type", "Authorization"]
+  }
 }
