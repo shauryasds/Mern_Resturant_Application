@@ -7,6 +7,7 @@
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "proxy": "https://mern-resturant-application-backend.vercel.app",
   "author": "",
   "license": "ISC",
   "dependencies": {
