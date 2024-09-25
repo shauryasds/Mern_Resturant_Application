@@ -10,8 +10,9 @@
     {
       "src": "/(.*)",
       "dest": "index.js",
-      "Access-Allow-Control-Origin":"*"
-     
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
     }
   ]
 }
