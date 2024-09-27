@@ -1,4 +1,4 @@
-const backendUrl="https://resturantbackend-nine.vercel.app" 
+const backendUrl="https://backendresturant-pi.vercel.app" 
 const apiUrl = {
   login: {
     method: "POST",
