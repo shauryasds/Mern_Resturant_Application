@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 var cors = require('cors')
 const DB_PASSWORD = process.env.DB_PASSWORD;
 
-async function connectDb(){ 
+async function connectDb(){  
   if (!DB_PASSWORD) {
     console.error('DB_PASSWORD environment variable is not set');
     process.exit(1);
