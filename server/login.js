@@ -23,7 +23,7 @@ async function login(req, res) {
        
 
         // Send the token to the client
-        res.status(200).setHeader('Set-Cookie', `user=${token}; Secure; SameSite=None; Domain=frontend-resturant.vercel.app; Path=/; HttpOnly; Max-Age=3600000`).json({ success: true, message: "logged in", body: user, error: false });
+        res.status(200).setHeader('Set-Cookie', `user=${token}; Secure; SameSite=None; Domain=frontend-resturant.vercel.app; Path=/;  Max-Age=3600000`).json({ success: true, message: "logged in", body: user, error: false });
     } catch (error) {
         console.error('Login error:', error);
         res.status(500).json({ message: 'Internal server error' });
