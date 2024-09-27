@@ -25,9 +25,9 @@ async function startServer() {
   const app = express();
 
 app.use(cors({
-  origin: ['https://mern-resturant-application1-git-master-shaurya-deeps-projects.vercel.app'], 
+  origin: 'https://frontend-resturant.vercel.app',
   credentials: true
-};));
+}));
      
   app.use(cookieParser());
   app.use(express.json());
