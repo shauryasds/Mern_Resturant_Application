@@ -34,13 +34,5 @@
         }
       ]
     }
-  ],
-  "cors": {
-    "allowOrigin": ["https://mern-resturant-application1-git-master-shaurya-deeps-projects.vercel.app"],
-    "allowMethods": ["GET,OPTIONS,PATCH,DELETE,POST,PUT"],
-    "allowHeaders": ["X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"],
-    "exposeHeaders": ["X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"],
-    "maxAge": 86400,
-    "credentials": true
-  }
+  ]
 }
