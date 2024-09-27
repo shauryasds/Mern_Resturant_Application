@@ -24,13 +24,13 @@ async function startServer() {
   await connectDb();
   const app = express();
 
-  app.use(cors({
+ app.use(cors({
   origin: 'https://mern-resturant-application1-git-master-shaurya-deeps-projects.vercel.app',
   credentials: true, // Allow cookies and other credentials
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['X-CSRF-Token', 'X-Requested-With', 'Content-Type', 'Accept'],
 }));
-  app.options('*', cors());
+  
   app.use(cookieParser());
   app.use(express.json());
   const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
