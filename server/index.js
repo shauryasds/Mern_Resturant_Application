@@ -30,6 +30,7 @@ async function startServer() {
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['X-CSRF-Token', 'X-Requested-With', 'Content-Type', 'Accept'],
 }));
+  app.options('*', cors());
   app.use(cookieParser());
   app.use(express.json());
   const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
