@@ -27,7 +27,7 @@ async function login(req, res) {
   .cookie('user', token, {
     secure: true, // Set the cookie to secure
     sameSite: 'none', // Set the same-site policy to none (not strict)
-    domain: 'https://frontend-resturant.vercel.app', // Set the domain for the cookie
+    domain: 'frontend-resturant.vercel.app', // Set the domain for the cookie
     path: '/', // Set the path for the cookie
     httpOnly: true, // Set the cookie to be accessible only by the web server
     maxAge: 3600000 // Set the cookie to expire after 1 hour (optional)
