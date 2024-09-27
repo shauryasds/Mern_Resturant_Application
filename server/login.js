@@ -23,7 +23,11 @@ async function login(req, res) {
        
 
         // Send the token to the client
-        res.status(200).cookie('user',token).json({success:true,message:"logged in",body:user,error:false});
+        // res.status(200).cookie('user',token).json({success:true,message:"logged in",body:user,error:false});
+        res.status(200)
+            .setHeader('Set-Cookie', `user=${token}; HttpOnly; Secure; SameSite=None; Max-Age=3600`)
+            .json({ success: true, message: "logged in", body: user, error: false });
+
 
     } catch (error) {
         console.error('Login error:', error);
