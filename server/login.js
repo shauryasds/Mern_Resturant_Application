@@ -23,11 +23,16 @@ async function login(req, res) {
        
 
         // Send the token to the client
-       res.status(200).cookie('user', token, {
-  secure: true, // Set the cookie to secure
-   sameSite: 'none' // Set the same-site policy to strict
-}).json({ success: true, message: "logged in", body: user, error: false });
-
+     res.status(200)
+  .cookie('user', token, {
+    secure: true, // Set the cookie to secure
+    sameSite: 'none', // Set the same-site policy to none (not strict)
+    domain: 'example.com', // Set the domain for the cookie
+    path: '/', // Set the path for the cookie
+    httpOnly: true, // Set the cookie to be accessible only by the web server
+    maxAge: 3600000 // Set the cookie to expire after 1 hour (optional)
+  })
+  .json({ success: true, message: "logged in", body: user, error: false });
     } catch (error) {
         console.error('Login error:', error);
         res.status(500).json({ message: 'Internal server error' });
