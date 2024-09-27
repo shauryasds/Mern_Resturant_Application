@@ -25,8 +25,7 @@ async function login(req, res) {
         // Send the token to the client
        res.status(200).cookie('user', token, {
   secure: true, // Set the cookie to secure
-  httpOnly: true, // Set the cookie to HTTP only
-  sameSite: 'none' // Set the same-site policy to strict
+   sameSite: 'none' // Set the same-site policy to strict
 }).json({ success: true, message: "logged in", body: user, error: false });
 
     } catch (error) {
