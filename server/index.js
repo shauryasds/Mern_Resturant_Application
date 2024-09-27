@@ -25,11 +25,9 @@ async function startServer() {
   const app = express();
 
 //  app.use(cors({
-//   origin: 'https://mern-resturant-application1-git-master-shaurya-deeps-projects.vercel.app',
-//   credentials: true, // Allow cookies and other credentials
-//   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-//   allowedHeaders: ['X-CSRF-Token', 'X-Requested-With', 'Content-Type', 'Accept'],
-// }));
+  origin: ['https://mern-resturant-application1-git-master-shaurya-deeps-projects.vercel.app'], // allow requests from this origin
+  credentials: true, // allow credentials (e.g., cookies) to be sent
+};));
      
   app.use(cookieParser());
   app.use(express.json());
