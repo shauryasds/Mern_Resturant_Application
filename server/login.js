@@ -18,17 +18,11 @@ async function login(req, res) {
         // Create JWT token
         const token = jwt.sign({ id: user._id, email: user.email }, JWT_SECRET_KEY, { expiresIn: '1h' });
 
-        // Send the token to the client
-        res
-            .status(200)
-            .cookie('user', token, {
-                secure: true,
-                sameSite: 'None',
-                domain: 'frontend-restaurant.vercel.app',
-                path: '/',
-                maxAge: 3600000, // 1 hour
-            })
-            .json({ success: true, message: "Logged in", body: user, error: false });
+        // Set the cookie header manually
+        res.setHeader('Set-Cookie', `user=${token}; Secure; HttpOnly; SameSite=None; Domain=frontend-restaurant.vercel.app; Path=/; Max-Age=3600`);
+
+        // Send response
+        res.status(200).json({ success: true, message: "Logged in", body: user, error: false });
     } catch (error) {
         console.error(error); // Log the error for debugging
         res.status(500).json({ message: 'Internal server error', error: true });
