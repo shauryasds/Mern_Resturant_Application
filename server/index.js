@@ -27,6 +27,9 @@ async function startServer() {
 app.use(cors({
   origin: 'https://frontend-resturant.vercel.app',
   credentials: true
+}));app.use(cors({
+  origin: 'https://frontend-resturant-lo0m72wyl-shaurya-deeps-projects.vercel.app',
+  credentials: true
 }));
      
   app.use(cookieParser());
