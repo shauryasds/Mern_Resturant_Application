@@ -19,8 +19,15 @@ async function login(req, res) {
         const token = jwt.sign({ id: user._id, email: user.email }, JWT_SECRET_KEY, { expiresIn: '1h' });
 
         // Set the cookie header manually
-        res.setHeader('Set-Cookie', `user=${token}; Secure; HttpOnly; SameSite=None; Domain=frontend-restaurant.vercel.app; Path=/; Max-Age=3600`);
-
+        res.setHeader('Set-Cookie', `user=${token}; Secure; HttpOnly; SameSite=None; Domain=frontend-restaurant.vercel.app; Path=/d; Max-Age=3600`);
+res.cookie('user', token, {
+  secure: true,
+  sameSite: 'None',
+  domain: 'your-frontend-domain.com', // or 'localhost' for local testing
+  path: '/d',
+  maxAge: 3600,
+  httpOnly: true
+});
         // Send response
         res.status(200).json({ success: true, message: "Logged in", body: user, error: false });
     } catch (error) {
