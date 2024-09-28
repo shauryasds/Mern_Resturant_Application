@@ -23,7 +23,7 @@ async function login(req, res) {
 res.cookie('user', token, {
   secure: true,
   sameSite: 'None',
-  domain: 'your-frontend-domain.com', // or 'localhost' for local testing
+  domain: 'frontend-restaurant.vercel.app', // or 'localhost' for local testing
   path: '/d',
   maxAge: 3600,
   httpOnly: true
