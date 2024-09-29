@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const User = require('path_to_user_model'); // Ensure you import your User model
+const User = require('./models/UserModel'); // Ensure you import your User model
 const JWT_SECRET_KEY = process.env.JWT_SECRET_KEY; // Use environment variable for the secret key
 
 async function login(req, res) {
@@ -20,12 +20,9 @@ async function login(req, res) {
 
         // Set the cookie header manually
       res.cookie('user', token, {
-  secure: true,
-  sameSite: 'none',
-  domain: 'frontend-restaurant.vercel.app', // or 'localhost' for local testing
-  path: '/',
-  maxAge: 3600,
-  httpOnly: true
+  
+  sameSite: 'None',
+  secure:true
 });
         // Send response
         res.status(200).json({ success: true, message: "Logged in", body: user, error: false });
