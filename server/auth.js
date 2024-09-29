@@ -10,7 +10,7 @@ async function auth(req, res, next) {
         const decoded = await jwt.verify(token, JWT_SECRET_KEY);
         console.log('Decoded:', decoded);
   
-        const result = await User.findOne({ email: decoded.email });
+        const result = await User.findOne({ email: decoded.data.email });
         console.log('Result:', result);
   
         if (result !== null && result.role === 'admin') {
