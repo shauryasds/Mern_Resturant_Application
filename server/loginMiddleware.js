@@ -1,13 +1,18 @@
-const jwt=require('jsonwebtoken')
+const jwt = require('jsonwebtoken')
 const User=require('./models/UserModel')
 
 async function loginMiddlewaare(req,res,next){
+  
     const JWT_SECRET_KEY = process.env.JWT_SECRET_KEY;
+    console.log(JWT_SECRET_KEY,'JWT_SECRET_KEY')
+
     const token = req.cookies["user"];
     console.log(token,'token from cookie')
     let decoded;
     try {
       decoded = await jwt.verify(token, JWT_SECRET_KEY);
+      console.log(decoded,'decodede')
+
     } catch (e) {
       console.error("JWT Verification Error:", e.message); 
       return res.json({
@@ -17,10 +22,10 @@ async function loginMiddlewaare(req,res,next){
       });
     }
 
-    console.log("decode:", decoded.data.email); // Log the error message
+    console.log("decode:", decoded.email); // Log the error message
     let user;
     try {
-      user = await User.findOne({ email: decoded.data.email })
+      user = await User.findOne({ email: decoded.email })
       console.log(" user:", user); // Log the error message
     } catch (e) {
       console.error("Database Error:", e.message); // Log the error message
