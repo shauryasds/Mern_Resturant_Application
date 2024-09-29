@@ -10,7 +10,7 @@
     {
       "src": "/(.*)",
       "dest": "/",
-      "headers": [
+      "headers": [ 
         { "key": "Access-Control-Allow-Credentials", "value": "true" },
         { "key": "Access-Control-Allow-Origin", "value": "https://frontend-resturant.vercel.app" },
         { "key": "Access-Control-Allow-Methods", "value": "GET,OPTIONS,PATCH,DELETE,POST,PUT" },
