@@ -1,4 +1,4 @@
-const backendUrl="http://localhost:4000"
+const backendUrl="https://frontend-resturant.vercel.app"
 const apiUrl = {
   login: {
     method: "POST",
