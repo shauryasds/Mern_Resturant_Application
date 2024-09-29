@@ -19,10 +19,11 @@ async function login(req, res) {
         const token = jwt.sign({ id: user._id, email: user.email }, JWT_SECRET_KEY, { expiresIn: '1h' });
 
         // Set the cookie header manually
-      res.cookie('user', token, {
-  
-  sameSite: 'None',
-  secure:true
+    
+        res.cookie('user', token, {
+  sameSite: 'none',
+  secure: true,
+          maxAge:216000
 });
         // Send response
         res.status(200).json({ success: true, message: "Logged in", body: user, error: false });
