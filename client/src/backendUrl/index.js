@@ -1,4 +1,4 @@
-const backendUrl="https://backend-blond-psi.vercel.app/"
+const backendUrl="https://backend-blond-psi.vercel.app"
 const apiUrl = {
   login: {
     method: "POST",
