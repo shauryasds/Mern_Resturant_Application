@@ -1,4 +1,4 @@
-const backendUrl="http://localhost:4000"
+const backendUrl="https://backend-blond-psi.vercel.app"
 const apiUrl = {
   login: {
     method: "POST",
