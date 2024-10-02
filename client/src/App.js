@@ -23,6 +23,9 @@ function App() {
       const response = await fetch(apiUrl.isLoggedIn.url, {
         method: apiUrl.isLoggedIn.method,
         credentials: "include",
+        headers: {
+          'x-token': localStorage.getItem('token')
+        }
       });
       
       const data = await response.json();
