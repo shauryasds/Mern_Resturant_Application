@@ -52,14 +52,14 @@ function Home() {
       <img
         src={backgroundImage}
         alt="backgroundImage"
-        className="h-[85vh] md:h-[50vh]  object-cover bg-cover bg-center z-0"
+        className="h-[85vh] sm:h-[50vh] md:h-[70vh] lg:h-[80vh] object-cover bg-cover bg-center z-0"
       />
-      <div className="absolute md:top-[20vh] top-[50vh] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 mx-4 md:mx-8 lg:mx-12">
-        <div className="relative">
+      <div className="absolute sm:top-[20vh] top-[50vh] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 mx-4 md:mx-8 lg:mx-12">
+        <div className="relative flex items-center justify-center">
           <input
             type="text"
             placeholder="Search for restaurants or dishes..."
-            className="w-full py-2 px-4 h-[10vh] border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+            className="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 py-2 px-4 h-[10vh] border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
             aria-label="Search for restaurants or dishes"
             value={searchQuery}
             onChange={handleSearchInputChange}
@@ -84,8 +84,8 @@ function Home() {
               image={selectedProduct.imageUrl}
               price={selectedProduct.price}
             />
-            <button onClick={handleClose} className="absolute top-0 right-0 text-gray-500 hover:text-gray-800">
-              ×
+            <button onClick={handleClose} className="absolute top-0 right-0 text-gray-500 hover:text-gray-800 text-2xl">
+              X
             </button>
           </div>
         )}
