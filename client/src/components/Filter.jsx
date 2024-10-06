@@ -14,7 +14,7 @@ function Filter({ onFilterChange }) {
 
   return (
     <div
-      className="sticky sm:hidden block top-32 border border-blue-200 rounded p-4 my-16 max-h-48 w-full mx-2 bg-white shadow-md" // Tailwind CSS styling
+      className="sticky sm:hidden md:block lg:block xl:block top-32 border border-blue-200 rounded p-4 my-16 max-h-48 w-full mx-2 bg-white shadow-md" // Tailwind CSS styling
     >
       <div className="font-bold text-lg  text-center mb-4">FILTERS</div>
       <div className="grid grid-cols-1 gap-4">
@@ -24,7 +24,7 @@ function Filter({ onFilterChange }) {
             name="price"
             value={filterOptions.price}
             onChange={handleFilterChange}
-            className="border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+            className="border border-gray-300 w-[50%] rounded px-2 py-1 focus:outline-none focus:ring focus:ring-blue-500 focus:ring-opacity-50"
           >
             <option value="">All</option>
             <option value="500">500 or LESS</option>
