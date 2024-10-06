@@ -48,18 +48,18 @@ function Home() {
   }
 
   return (
-    <div className="relative min-h-screen">
+    <div className="relative h-screen">
       <img
         src={backgroundImage}
         alt="backgroundImage"
-        className="h-[85vh] sm:h-[50vh] md:h-[70vh] lg:h-[80vh] object-cover bg-cover bg-center z-0"
+        className="w-full h-[85vh] object-cover bg-cover bg-center z-0"
       />
-      <div className="absolute sm:top-[20vh] top-[50vh] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 mx-4 md:mx-8 lg:mx-12">
-        <div className="relative flex items-center justify-center">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 mx-4">
+        <div className="relative">
           <input
             type="text"
             placeholder="Search for restaurants or dishes..."
-            className="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 py-2 px-4 h-[10vh] border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+            className="w-[80vw] py-2 px-4 h-[10vh] border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
             aria-label="Search for restaurants or dishes"
             value={searchQuery}
             onChange={handleSearchInputChange}
@@ -84,16 +84,17 @@ function Home() {
               image={selectedProduct.imageUrl}
               price={selectedProduct.price}
             />
-            <button onClick={handleClose} className="absolute top-0 right-0 text-gray-500 hover:text-gray-800 text-2xl">
+            <button onClick={handleClose} className="absolute top-0 right-0 text-gray-500 hover:text-gray-800 text-3xl text-white">
               X
             </button>
           </div>
         )}
       </div>
-      <div className="sticky top-0 bg-black w-full h-full overflow-y-auto z-10 flex flex-col">
+      <div className="sticky top-0 bg-black  w-full h-full overflow-y-auto z-10">
+       
         <Category />
-        <div className=''>
-          <Products />
+        <div className='sticky top-0 h-full overflow-y-auto '>
+        <Products />
         </div>
       </div>
     </div>
