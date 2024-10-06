@@ -76,7 +76,7 @@ function Header() {
         </div>
 
         {/* Navigation */}
-        <nav className="hidden md:flex space-x-6">
+        <nav className=" flex space-x-6">
           {!loginStatus ? (
             <Link
               to="/Login"
