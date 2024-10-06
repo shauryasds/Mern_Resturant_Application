@@ -48,18 +48,18 @@ function Home() {
   }
 
   return (
-    <div className="relative h-screen">
+    <div className="relative h-screen flex flex-col">
       <img
         src={backgroundImage}
         alt="backgroundImage"
         className="w-full h-[85vh] object-cover bg-cover bg-center z-0"
       />
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 mx-4">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 mx-4 md:mx-8 lg:mx-12">
         <div className="relative">
           <input
             type="text"
             placeholder="Search for restaurants or dishes..."
-            className="w-[50vw] py-2 px-4 h-[10vh] border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+            className="w-full py-2 px-4 h-[10vh] border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary md:w-1/2 lg:w-1/3"
             aria-label="Search for restaurants or dishes"
             value={searchQuery}
             onChange={handleSearchInputChange}
@@ -90,11 +90,10 @@ function Home() {
           </div>
         )}
       </div>
-      <div className="sticky top-0 bg-black  w-full h-full overflow-y-auto z-10">
-       
+      <div className="sticky top-0 bg-black  w-full h-full overflow-y-auto z-10 flex flex-col">
         <Category />
-        <div className='sticky top-0 h-full overflow-y-auto '>
-        <Products />
+        <div className='sticky top-0 h-full overflow-y-auto'>
+          <Products />
         </div>
       </div>
     </div>
