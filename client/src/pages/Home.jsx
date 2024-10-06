@@ -48,7 +48,7 @@ function Home() {
   }
 
   return (
-    <div className="relative h-screen flex flex-col">
+    <div className="relative h-[50vh] md:h-screen flex flex-col">
       <img
         src={backgroundImage}
         alt="backgroundImage"
