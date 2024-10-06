@@ -13,7 +13,7 @@ function Filter({ onFilterChange }) {
 
   return (
     <div
-      className="sticky sm:hidden top-32 border border-blue-200 rounded p-4 my-16 max-h-48 w-full mx-2 bg-white shadow-md" // Tailwind CSS styling
+      className="sticky top-32 border border-blue-200 rounded p-4 my-16 max-h-48 w-full mx-2 bg-white shadow-md" // Tailwind CSS styling
     >
       <div className="font-bold text-lg  text-center mb-4">FILTERS</div>
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
