@@ -14,7 +14,7 @@ function Filter({ onFilterChange }) {
 
   return (
     <div
-      className="sticky block sm:hidden top-32 border border-blue-200 rounded p-4 my-16 max-h-48 w-full mx-2 bg-white shadow-md" // Tailwind CSS styling
+      className="sticky hidden sm:block md:block lg:block xl:block top-32 border border-blue-200 rounded p-4 my-16 max-h-48 w-full mx-2 bg-white shadow-md" // Tailwind CSS styling
     >
       <div className="font-bold text-md  text-center mb-4">FILTERS</div>
       <div className="grid grid-cols-1 gap-4">
