@@ -13,12 +13,12 @@ function Filter({ onFilterChange }) {
 
   return (
     <div
-      className="sticky top-32 border border-blue-200 rounded p-4 my-16 max-h-48 w-full mx-2 bg-white shadow-md" // Tailwind CSS styling
+      className="sticky sm:hidden top-32 border border-blue-200 rounded p-4 my-16 max-h-48 w-full mx-2 bg-white shadow-md" // Tailwind CSS styling
     >
       <div className="font-bold text-lg  text-center mb-4">FILTERS</div>
-      <div className="grid grid-cols-1 gap-4">
-        <div className="flex items-center">
-          <div className="text-gray-700 mr-2">Price:</div>
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="flex flex-col items-center">
+          <div className="text-gray-700 mb-2">Price:</div>
           <select
             name="price"
             value={filterOptions.price}
@@ -33,8 +33,6 @@ function Filter({ onFilterChange }) {
             <option value="100">100 or LESS</option>
           </select>
         </div>
-
-       
       </div>
     </div>
   );
