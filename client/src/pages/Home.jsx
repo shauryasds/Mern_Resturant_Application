@@ -48,7 +48,7 @@ function Home() {
   }
 
   return (
-    <div className="relative h-screen">
+    <div className="relative min-h-screen">
       <img
         src={backgroundImage}
         alt="backgroundImage"
@@ -92,7 +92,7 @@ function Home() {
       </div>
       <div className="sticky top-0 bg-black w-full h-full overflow-y-auto z-10 flex flex-col">
         <Category />
-        <div className='sticky top-0 h-full overflow-y-auto'>
+        <div className=''>
           <Products />
         </div>
       </div>
