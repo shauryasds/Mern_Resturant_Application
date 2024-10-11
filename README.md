@@ -1,4 +1,4 @@
-<!DOCTYPE html> <html> <head> <title>Full-Stack MERN App: Restaurant App</title> </head> <body> <h1>Full-Stack MERN App: Restaurant App</h1> <h2>Overview</h2> <p>This is a full-stack MERN (MongoDB, Express, React, Node.js) application built using Tailwind CSS for styling and Material UI for component library. The app is deployed on Vercel at <a href="https://frontend-resturant.vercel.app/">https://frontend-resturant.vercel.app/</a>.</p><h2>Technologies Used</h2>
+<!DOCTYPE html> <html> <head> <h1>Full-Stack MERN App: Restaurant App</h1> <h2>Overview</h2> <p>This is a full-stack MERN (MongoDB, Express, React, Node.js) application built using Tailwind CSS for styling and Material UI for component library. The app is deployed on Vercel at <a href="https://frontend-resturant.vercel.app/">https://frontend-resturant.vercel.app/</a>.</p><h2>Technologies Used</h2>
 <ul>
 	<li><strong>Frontend</strong>: React, Material UI, Tailwind CSS</li>
 	<li><strong>Backend</strong>: Node.js, Express</li>
